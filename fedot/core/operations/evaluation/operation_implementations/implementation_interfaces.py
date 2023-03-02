@@ -119,7 +119,7 @@ class EncodedInvariantImplementation(DataOperationImplementation):
         :return transformed_features: transformed features table
         """
 
-        features_to_process = np.array(features[:, self.ids_to_process])
+        features_to_process = np.array(features) #[:, self.ids_to_process])
         transformed_part = self.operation.transform(features_to_process)
 
         # If there are no binary features in the dataset
