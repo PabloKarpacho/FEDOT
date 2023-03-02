@@ -249,7 +249,7 @@ class DataPreprocessor(BasePreprocessor):
         replace_inf_with_nans(data)
 
         # Perform preprocessing for types - launch after correct features selection
-        self._take_only_correct_features(data, source_name)
+        #self._take_only_correct_features(data, source_name)
         self.types_correctors[source_name].convert_data_for_predict(data)
 
         if data_type_is_text(data):
